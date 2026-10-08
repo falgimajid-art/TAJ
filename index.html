@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1F3A33">
-<title>تاج الفيصلية للأثاث</title>
+<title>تاج الفيصلية للديكور</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* =====================================================================
-   تاج الفيصلية للأثاث — الأنماط
+   تاج الفيصلية للديكور — الأنماط
    الهوية: مخمل أخضر داكن + نحاس/برونز + أبيض ناصع
    ===================================================================== */
 :root{
@@ -393,7 +393,7 @@ bdi{unicode-bidi:isolate}
     <div class="topbar-in">
       <button class="brand" type="button" data-act="nav" data-page="home" aria-label="الصفحة الرئيسية">
         <img class="brand-mark" id="brandMark" alt="" height="40">
-        <img class="brand-word" id="brandWord" alt="تاج الفيصلية للأثاث" height="26">
+        <img class="brand-word" id="brandWord" alt="تاج الفيصلية للديكور" height="26">
       </button>
       <nav class="desk-nav" id="deskNav" aria-label="التنقل"></nav>
       <div class="search" id="searchWrap">
@@ -1383,7 +1383,7 @@ function invoiceHTML(o){
   const shopLine = [m.shopAddress, m.shopPhone].filter(Boolean).join('  |  ');
   return `<article class="invoice">
     <header class="inv-head">
-      <div class="inv-brand"><img class="inv-logo" src="${LOGO.full}" alt="تاج الفيصلية للأثاث">${shopLine ? `<p>${esc(shopLine)}</p>` : ''}</div>
+      <div class="inv-brand"><img class="inv-logo" src="${LOGO.full}" alt="تاج الفيصلية للديكور">${shopLine ? `<p>${esc(shopLine)}</p>` : ''}</div>
       <div class="inv-meta"><strong>طلب رقم <bdi>${pad(o.no)}</bdi></strong><span>تاريخ الطلب: ${fmtDate(o.createdAt)}</span></div>
     </header>
     <section class="inv-two">
@@ -1409,7 +1409,7 @@ function invoiceHTML(o){
     </tbody></table>
     ${o.notes ? `<section class="inv-sec"><h3>ملاحظات</h3><p>${esc(o.notes).replace(/\n/g,'<br>')}</p></section>` : ''}
     ${(o.images && o.images.length) ? `<section class="inv-sec"><h3>صور مرجعية</h3><div class="inv-imgs">${o.images.map(s => `<img src="${s}" alt="">`).join('')}</div></section>` : ''}
-    <p class="inv-thanks">نشكركم على ثقتكم بتاج الفيصلية للأثاث</p>
+    <p class="inv-thanks">نشكركم على ثقتكم بتاج الفيصلية للديكور</p>
   </article>`;
 }
 function openPrintPreview(id){
@@ -1476,7 +1476,7 @@ function downloadFile(file){
 }
 async function sharePng(el){
   const m = ovOf(el), o = orderById(el.dataset.id); if (!m || !o) return;
-  const title = `طلب رقم ${pad(o.no)} - تاج الفيصلية للأثاث`;
+  const title = `طلب رقم ${pad(o.no)} - تاج الفيصلية للديكور`;
   if (m.pngFile) {
     // الصورة جاهزة: نستدعي المشاركة فورًا داخل لمسة المستخدم (شرط iOS)
     const r = await shareFile(m.pngFile, title);
